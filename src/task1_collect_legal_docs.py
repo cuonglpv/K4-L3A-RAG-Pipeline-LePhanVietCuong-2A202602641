@@ -13,8 +13,26 @@ Nếu website chặn crawler, hãy chọn nguồn công khai khác; không vư�
 
 from pathlib import Path
 
+import requests
+
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
+
+POLICY_SOURCES = {
+    "vinuni-financial-regulations-ay25-26.pdf": (
+        "https://policy.vinuni.edu.vn/wp-content/uploads/2025/10/"
+        "VU_TS03.VN_Quy-dinh-tai-chinh-va-Bieu-phi_AY25-26_20251008-Websent.pdf"
+    ),
+    "vinuni-scholarship-maintenance-2025.pdf": (
+        "https://policy.vinuni.edu.vn/wp-content/uploads/2025/09/"
+        "GDL-SAM-004-V2.1_Tieu-chi-duy-tri-Hoc-bong-dau-vao-va-"
+        "Ho-tro-tai-chinh_4.9.2025.pdf"
+    ),
+    "vinuni-financial-support-guidelines-2024.pdf": (
+        "https://policy.vinuni.edu.vn/wp-content/uploads/2024/09/"
+        "VUNI.84_Guideline-for-Student-Financial-Support-Request_17.09.2024.pdf"
+    ),
+}
 
 
 def setup_directory() -> None:
@@ -25,19 +43,15 @@ def setup_directory() -> None:
 
 def download_documents() -> None:
     """Tải ít nhất 3 PDF/DOCX từ nguồn công khai."""
-    # TODO: Có thể tải thủ công hoặc dùng requests.
-    #
-    # Ví dụ:
-    # import requests
-    #
-    # sources = {
-    #     "policy-a.pdf": "https://example.edu/policy-a.pdf",
-    # }
-    # for filename, url in sources.items():
-    #     response = requests.get(url, timeout=30)
-    #     response.raise_for_status()
-    #     (DATA_DIR / filename).write_bytes(response.content)
-    raise NotImplementedError("Implement download_documents")
+    setup_directory()
+    for filename, url in POLICY_SOURCES.items():
+        response = requests.get(url, timeout=60)
+        response.raise_for_status()
+        if len(response.content) <= 1024:
+            raise ValueError(f"Downloaded file is unexpectedly small: {url}")
+        output = DATA_DIR / filename
+        output.write_bytes(response.content)
+        print(f"Saved: {output}")
 
 
 if __name__ == "__main__":
