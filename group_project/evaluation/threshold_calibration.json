@@ -1,0 +1,138 @@
+{
+  "in_domain": {
+    "label": "in-domain (golden dataset)",
+    "n": 18,
+    "min": 0.5927,
+    "p25": 0.6499,
+    "median": 0.671,
+    "p75": 0.7119,
+    "max": 0.7615,
+    "mean": 0.681
+  },
+  "out_of_domain": {
+    "label": "out-of-domain",
+    "n": 8,
+    "min": 0.3177,
+    "p25": 0.3757,
+    "median": 0.4257,
+    "p75": 0.5518,
+    "max": 0.6045,
+    "mean": 0.4517
+  },
+  "separation": {
+    "max_out_of_domain": 0.6045,
+    "min_in_domain": 0.5927,
+    "separable": false,
+    "suggested_threshold": null
+  },
+  "per_query": {
+    "in_domain": [
+      {
+        "query": "Học phí niêm yết mỗi năm của Cử nhân Điều dưỡng là bao nhiêu?",
+        "best_dense_score": 0.7615
+      },
+      {
+        "query": "Học phí niêm yết mỗi năm của chương trình Bác sĩ Y khoa là bao nhiêu?",
+        "best_dense_score": 0.7518
+      },
+      {
+        "query": "Hỗ trợ 35% học phí có áp dụng cho sinh viên quốc tế không?",
+        "best_dense_score": 0.6503
+      },
+      {
+        "query": "Sinh viên đóng học phí theo năm hay theo học kỳ?",
+        "best_dense_score": 0.6594
+      },
+      {
+        "query": "Khi nào có thể bị tính học phí theo tín chỉ?",
+        "best_dense_score": 0.7096
+      },
+      {
+        "query": "Học bổng và hỗ trợ tài chính có thể cộng vượt 100% học phí không?",
+        "best_dense_score": 0.7129
+      },
+      {
+        "query": "President’s Excellence Scholarship chi trả những gì?",
+        "best_dense_score": 0.6741
+      },
+      {
+        "query": "Học bổng WIT hỗ trợ bao nhiêu và cho ai?",
+        "best_dense_score": 0.6508
+      },
+      {
+        "query": "Future Leader Grant dành cho ứng viên nào?",
+        "best_dense_score": 0.5927
+      },
+      {
+        "query": "Điều kiện CGPA duy trì học bổng toàn phần hoặc 100% là gì?",
+        "best_dense_score": 0.7115
+      },
+      {
+        "query": "Điều kiện CGPA duy trì học bổng tài năng 50–90% là gì?",
+        "best_dense_score": 0.6989
+      },
+      {
+        "query": "Ứng viên mới cần điều kiện gì để nộp hỗ trợ tài chính?",
+        "best_dense_score": 0.664
+      },
+      {
+        "query": "Hạn nộp hồ sơ để nhận kết quả hỗ trợ tài chính ngày 15 là khi nào?",
+        "best_dense_score": 0.6679
+      },
+      {
+        "query": "Sinh viên hiện tại cần điều kiện chung nào để được hỗ trợ tài chính?",
+        "best_dense_score": 0.7048
+      },
+      {
+        "query": "Nếu hồ sơ hỗ trợ tài chính chưa đầy đủ thì được báo trong bao lâu?",
+        "best_dense_score": 0.6487
+      },
+      {
+        "query": "Kháng nghị hỗ trợ tài chính phải nộp trong bao lâu?",
+        "best_dense_score": 0.6302
+      },
+      {
+        "query": "Tiền hỗ trợ học phí và hỗ trợ ngoài học phí được giải ngân khác nhau thế nào?",
+        "best_dense_score": 0.6307
+      },
+      {
+        "query": "Phí ký túc xá tham khảo cho sinh viên năm nhất là bao nhiêu?",
+        "best_dense_score": 0.738
+      }
+    ],
+    "out_of_domain": [
+      {
+        "query": "Cách nấu phở bò truyền thống ngon nhất là gì?",
+        "best_dense_score": 0.3177
+      },
+      {
+        "query": "Giá vé máy bay Hà Nội đi Đà Nẵng tháng này bao nhiêu?",
+        "best_dense_score": 0.5212
+      },
+      {
+        "query": "Làm sao cài đặt Docker trên Ubuntu 22.04?",
+        "best_dense_score": 0.373
+      },
+      {
+        "query": "Đội tuyển Việt Nam thi đấu vòng loại World Cup khi nào?",
+        "best_dense_score": 0.4038
+      },
+      {
+        "query": "Triệu chứng của bệnh sốt xuất huyết là gì?",
+        "best_dense_score": 0.3837
+      },
+      {
+        "query": "Thủ tục đăng ký kết hôn với người nước ngoài gồm những gì?",
+        "best_dense_score": 0.4475
+      },
+      {
+        "query": "Học phí ngành Luật của Đại học Bách khoa Hà Nội là bao nhiêu?",
+        "best_dense_score": 0.562
+      },
+      {
+        "query": "Tỷ giá USD/VND hôm nay là bao nhiêu?",
+        "best_dense_score": 0.6045
+      }
+    ]
+  }
+}

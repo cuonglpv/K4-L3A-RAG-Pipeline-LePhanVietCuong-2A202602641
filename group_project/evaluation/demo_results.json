@@ -1,0 +1,102 @@
+[
+  {
+    "label": "Query 1 — trong domain",
+    "query": "Điều kiện CGPA để duy trì học bổng toàn phần là gì?",
+    "best_dense_score": 0.6854,
+    "answer": "Điều kiện để duy trì học bổng toàn phần là sinh viên cần đạt điểm trung bình (GPA) từ 3.2 trở lên [source:news/article_05.md::chunk-19].",
+    "retrieval_source": "hybrid",
+    "latency_s": 3.872,
+    "sources": [
+      {
+        "id": "legal/vinuni-scholarship-maintenance-2025.md::chunk-7",
+        "title": "vinuni-scholarship-maintenance-2025",
+        "source_file": "vinuni-scholarship-maintenance-2025.md",
+        "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2025/09/GDL-SAM-004-V2.1_Tieu-chi-duy-tri-Hoc-bong-dau-vao-va-Ho-tro-tai-chinh_4.9.2025.pdf",
+        "score": 0.032787,
+        "retrieval_method": "hybrid"
+      },
+      {
+        "id": "legal/vinuni-scholarship-maintenance-2025.md::chunk-6",
+        "title": "vinuni-scholarship-maintenance-2025",
+        "source_file": "vinuni-scholarship-maintenance-2025.md",
+        "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2025/09/GDL-SAM-004-V2.1_Tieu-chi-duy-tri-Hoc-bong-dau-vao-va-Ho-tro-tai-chinh_4.9.2025.pdf",
+        "score": 0.032002,
+        "retrieval_method": "hybrid"
+      },
+      {
+        "id": "legal/vinuni-scholarship-maintenance-2025.md::chunk-15",
+        "title": "vinuni-scholarship-maintenance-2025",
+        "source_file": "vinuni-scholarship-maintenance-2025.md",
+        "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2025/09/GDL-SAM-004-V2.1_Tieu-chi-duy-tri-Hoc-bong-dau-vao-va-Ho-tro-tai-chinh_4.9.2025.pdf",
+        "score": 0.031498,
+        "retrieval_method": "hybrid"
+      },
+      {
+        "id": "news/article_05.md::chunk-19",
+        "title": "Tuition Fee, Scholarship, and Financial Aids - Admission",
+        "source_file": "article_05.md",
+        "url": "https://admissions.vinuni.edu.vn/undergraduate/faqs/tuition-fee-scholarship-and-financial-aids/",
+        "score": 0.016129,
+        "retrieval_method": "hybrid"
+      },
+      {
+        "id": "legal/vinuni-scholarship-maintenance-2025.md::chunk-3",
+        "title": "vinuni-scholarship-maintenance-2025",
+        "source_file": "vinuni-scholarship-maintenance-2025.md",
+        "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2025/09/GDL-SAM-004-V2.1_Tieu-chi-duy-tri-Hoc-bong-dau-vao-va-Ho-tro-tai-chinh_4.9.2025.pdf",
+        "score": 0.015625,
+        "retrieval_method": "hybrid"
+      }
+    ]
+  },
+  {
+    "label": "Query 2 — ngoài domain",
+    "query": "Cách nấu phở bò truyền thống ngon nhất là gì?",
+    "best_dense_score": 0.3177,
+    "answer": "Thông tin về cách nấu phở bò truyền thống không có trong các tài liệu được cung cấp. Do đó, tôi từ chối xác minh yêu cầu này.",
+    "retrieval_source": "hybrid",
+    "latency_s": 2.152,
+    "sources": [
+      {
+        "id": "legal/vinuni-financial-regulations-ay25-26.md::chunk-100",
+        "title": "vinuni-financial-regulations-ay25-26",
+        "source_file": "vinuni-financial-regulations-ay25-26.md",
+        "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2025/10/VU_TS03.VN_Quy-dinh-tai-chinh-va-Bieu-phi_AY25-26_20251008-Websent.pdf",
+        "score": 0.029644,
+        "retrieval_method": "hybrid"
+      },
+      {
+        "id": "legal/vinuni-financial-regulations-ay25-26.md::chunk-112",
+        "title": "vinuni-financial-regulations-ay25-26",
+        "source_file": "vinuni-financial-regulations-ay25-26.md",
+        "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2025/10/VU_TS03.VN_Quy-dinh-tai-chinh-va-Bieu-phi_AY25-26_20251008-Websent.pdf",
+        "score": 0.016393,
+        "retrieval_method": "hybrid"
+      },
+      {
+        "id": "legal/vinuni-financial-regulations-ay25-26.md::chunk-34",
+        "title": "vinuni-financial-regulations-ay25-26",
+        "source_file": "vinuni-financial-regulations-ay25-26.md",
+        "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2025/10/VU_TS03.VN_Quy-dinh-tai-chinh-va-Bieu-phi_AY25-26_20251008-Websent.pdf",
+        "score": 0.016393,
+        "retrieval_method": "hybrid"
+      },
+      {
+        "id": "legal/vinuni-financial-regulations-ay25-26.md::chunk-110",
+        "title": "vinuni-financial-regulations-ay25-26",
+        "source_file": "vinuni-financial-regulations-ay25-26.md",
+        "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2025/10/VU_TS03.VN_Quy-dinh-tai-chinh-va-Bieu-phi_AY25-26_20251008-Websent.pdf",
+        "score": 0.016129,
+        "retrieval_method": "hybrid"
+      },
+      {
+        "id": "legal/vinuni-financial-regulations-ay25-26.md::chunk-73",
+        "title": "vinuni-financial-regulations-ay25-26",
+        "source_file": "vinuni-financial-regulations-ay25-26.md",
+        "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2025/10/VU_TS03.VN_Quy-dinh-tai-chinh-va-Bieu-phi_AY25-26_20251008-Websent.pdf",
+        "score": 0.016129,
+        "retrieval_method": "hybrid"
+      }
+    ]
+  }
+]

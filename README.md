@@ -64,11 +64,29 @@ streamlit run app.py
 
 ## Tài liệu
 
+- [Teammates](TEAMMATES.md): danh sách thành viên và phân chia module.
 - [Module contracts](docs/MODULE_CONTRACTS.md): schema, interface và invariant mà code/test nên tuân theo.
 - [Step-by-step guide](docs/STEP_BY_STEP.md): thứ tự triển khai và tiêu chí hoàn thành từng bước.
 - [Grading rubric](docs/GRADING_RUBRIC.md): Rubric thang điểm.
 - [Individual report](group_project/ịndividual/INDIVIDUAL_REPORT.md): template báo cáo cá nhân.
 - [Suggested topics](docs/SUGGESTED_TOPICS.md): danh sách chủ đề tham khảo, không bắt buộc.
+
+## Đánh giá và demo
+
+```bash
+# 1. Hiệu chỉnh ngưỡng fallback bằng query in-domain và out-of-domain
+python -m group_project.evaluation.calibrate_threshold
+
+# 2. Chạy A/B: Config A (dense-only) vs Config B (hybrid + RRF)
+python -m group_project.evaluation.run_ab_eval --top-k 5
+
+# 3. Demo 1 query trong domain + 1 query ngoài domain kèm citation
+python -m group_project.evaluation.demo_queries
+```
+
+Kết quả: [RESULT.md](group_project/evaluation/RESULT.md) (báo cáo),
+`ab_results.json` (điểm từng case), `threshold_calibration.json` (phân bố score)
+và [DEMO.md](group_project/evaluation/DEMO.md) (transcript demo).
 
 ## Kiểm tra
 
