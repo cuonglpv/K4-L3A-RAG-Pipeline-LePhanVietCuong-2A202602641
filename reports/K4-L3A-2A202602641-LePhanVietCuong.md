@@ -5,7 +5,7 @@
 - Họ và tên: Lê Phan Việt Cường
 - Mã học viên: 2A202602641
 - Nhóm: K4-L3A
-- Repository/branch: `main`, baseline commit `6a2a2d4`
+- Repository/branch: `le-phan-viet-cuong`, baseline commit `6a2a2d4`
 
 ## Phần việc đã thực hiện
 
