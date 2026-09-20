@@ -15,31 +15,44 @@ Cài browser trước khi chạy:
 
 import asyncio
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
 ARTICLE_URLS = [
-    # TODO: Thêm ít nhất 5 public URL.
+    "https://admissions.vinuni.edu.vn/tuition-fee/undergraduate/",
+    "https://admissions.vinuni.edu.vn/scholarship-and-financial-aid/undergraduate-programs/scholarships/",
+    "https://admissions.vinuni.edu.vn/scholarship-and-financial-aid/undergraduate-programs/financial-aids/",
+    "https://admissions.vinuni.edu.vn/tuition-fee/financial-calculator/",
+    "https://admissions.vinuni.edu.vn/undergraduate/faqs/tuition-fee-scholarship-and-financial-aids/",
 ]
 
 
 async def crawl_article(url: str) -> dict:
-    # TODO: Implement crawling logic.
-    #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
+    """Crawl one public source page and retain the metadata required by the corpus."""
+    from crawl4ai import AsyncWebCrawler
+
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url=url)
+    if not result.success:
+        raise RuntimeError(getattr(result, "error_message", "Crawl failed"))
+    markdown_value = result.markdown
+    markdown = str(
+        getattr(markdown_value, "fit_markdown", None)
+        or getattr(markdown_value, "raw_markdown", None)
+        or markdown_value
+    ).strip()
+    if not markdown:
+        raise ValueError(f"Crawler returned no Markdown: {url}")
+    metadata = result.metadata or {}
+    return {
+        "url": url,
+        "title": str(metadata.get("title") or url).strip(),
+        "date_crawled": datetime.now(timezone.utc).isoformat(),
+        "content_markdown": markdown,
+    }
 
 
 async def crawl_all() -> None:
